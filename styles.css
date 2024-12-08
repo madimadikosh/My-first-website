@@ -1,0 +1,456 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Негізгі меню стилі */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative; /* Орындалған блокқа қатысты подменю орналасады */
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Подменю стилі */
+.submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Негізгі элементтің астына жылжу */
+    left: 0; /* Сол жақ шеті негізгі элементке тура келеді */
+    display: none; /* Әдепкіде жасырын болады */
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.submenu li {
+    padding: 10px;
+}
+
+.submenu li a {
+    color: #333;
+}
+
+/* Ховер кезінде подменюді көрсету */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Әдепкі стильдер */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+}
+
+/* Негізгі стильдер */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+.menu-button {
+    display: inline-block;
+    padding: 10px 15px 10px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+/* Бүйірлік меню стилі */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; /* Меню ені */
+    background: #333;
+    color: white;
+    transform: translateX(-100%); /* Толығымен экраннан тыс */
+    transition: transform 0.3s ease; /* Жұмсақ жылжу */
+    overflow: auto;
+}
+
+/* Checkbox белсенді болғанда меню ашылады */
+#menuToggle:checked + .menu-button + .side-menu {
+    transform: translateX(0); /* Экранға шығады */
+}
+
+/* Сілтемелер стилі */
+.side-menu ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.side-menu ul li {
+    margin: 10px 0;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.side-menu ul li a:hover {
+    color: #4caf50;
+}
+
+
+/* Жабу батырмасының стилі */
+.close-button {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.close-button:hover {
+    background: #555;
+}
+
+.menu-button-inside {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.menu-button-inside:hover {
+    background: #45a049;
+}
+
+.share-container {
+  position: relative;
+  display: inline-block;
+}
+
+.share-button {
+  background-color: #00aaff;
+  position: fixed;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  width: 55px;
+  height: 55px;
+  font-size: 20px;
+  cursor: pointer;
+  bottom: 75px;
+  right: 20px;
+}
+.share-button:hover{
+    background-color: #0077cc; /* Ховер кезінде түсін өзгерту */
+    transform: scale(1.1);    /* Сәл үлкейту әсері */
+}
+
+.share-menu {
+  display: none;
+  position: fixed;
+  bottom: 135px;
+  right: 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.share-menu .share-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.share-menu .share-link:hover {
+  background-color: #f0f0f0;
+} 
+
+
+
+/* Контейнер стилі */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 баған */
+  gap: 20px; /* Карточкалар арасындағы қашықтық */
+  padding: 20px;
+  max-width: 1000px; /* Контейнер ені */
+  margin: 0 auto;
+}
+
+/* Карточка стилі */
+.card {
+  position: relative;
+  height: 200px; /* Карточканың биіктігі */
+  border-radius: 10px; /* Дөңгелек бұрыштар */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Анимация */
+  opacity: 0.5; /* Мөлдірлік */
+}
+
+/* Тышқанмен әсер ету */
+.card:hover {
+  opacity: 1; /* Толық көріну */
+  transform: scale(1.05); /* Үлкейту әсері */
+}
+
+/* Текст стилі */
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Қара фон (мөлдір) */
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.card-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+
+.card:nth-child(1) {
+  background-image: url('https://th.bing.com/th/id/OIP.aE-Jd6h0sbDXAKrDn-ByIgHaE5?rs=1&pid=ImgDetMain');
+}
+.card:nth-child(2) {
+  background-image: url('https://th.bing.com/th/id/OIP.5a-dPgGum5-DNSGY14-WEQHaE8?rs=1&pid=ImgDetMain');
+}
+.card:nth-child(3) {
+    background-image: url("https://th.bing.com/th/id/OIP.3cUYtgFp8Kxo4-d8ql-xvgHaEK?rs=1&pid=ImgDetMain");
+}
+.card:nth-child(4) {
+    background-image: url("https://th.bing.com/th/id/OIP.ErJX-MsfZjdHiPK7JZgp-gHaEA?w=1920&h=1040&rs=1&pid=ImgDetMain");
+}
+.card:nth-child(5){
+    background-image: url("https://th.bing.com/th/id/R.03fa28bc3c7a57382533b0995f0fa336?rik=OPOVR7ahRhMXew&pid=ImgRaw&r=0");
+}
+.card:nth-child(6){
+    background-image: url("https://th.bing.com/th/id/OIP.mV5G9ckvsRzmBhrlXcHcOQHaE8?rs=1&pid=ImgDetMain");
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-button {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown-button:hover {
+    background-color: #2c3e50;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        .category {
+            background: #fff;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0.5;
+        }
+        .category:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            opacity: 1;
+        }
+        .category img {
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .category h3 {
+            margin: 15px 0;
+        }
+
+
+.progress-bar {
+  width: 0;
+  height: 20px;
+  background-color: grey;
+  border-radius: 5px;
+  animation: progress 2s linear infinite; /* Шексіз анимация */
+}
+
+.blue { background-color: blue; }
+.green { background-color: green; animation-delay: 0.4s; }
+.cyan { background-color: cyan; animation-delay: 0.8s; }
+.yellow { background-color: yellow; animation-delay: 1.2s; }
+.red { background-color: red; animation-delay: 1.6s; }
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%; /* Толық толтыру */
+  }
+  100% {
+    width: 0; /* Бастапқы қалпына келу */
+  }
+}
+
+
+
+/* Мобильді құрылғыларға бейімдеу */
+@media (max-width: 768px) {
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикалды орналасу */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+.hidden-checkbox {
+  visibility: hidden;
+}

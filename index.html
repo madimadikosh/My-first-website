@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Басты бет</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="javas" href="javas.js">
+
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Басты бет</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-button">Қызметтер</a>
+                <div class="dropdown-content">
+                    <a href="https://mercedes-benz.com.kz/spetspredlozheniya/servis-i-aksessuary/">Предзаказбен алу</a>
+                    <a href="https://mercedes-benz.com.kz/o-kompanii/o-nas/">Компания жайлы</a>
+                    <a href="https://mercedes-benz.com.kz/servis-i-aksessuary/servisnoe-obsluzhivanie/zapis-na-test-drive/">Тест драйвқа жазылу</a>
+                </div>
+                </li>
+            <li><a href="about.html">Біз туралы</a></li>
+            <li><a href="байланыс.html">Байланыс</a></li>
+        </ul>
+    </nav>
+    <div class="menu"><input type="checkbox" class="hidden-checkbox"id="menuToggle">
+        <label for="menuToggle" class="menu-button">☰ Меню</label>
+        <nav class="side-menu">
+        <label for="menuToggle" class="close-button">✖</label>
+        <ul><li><a href="https://mercedes-benz.com.kz/">Жеңіл автокөліктер</a></li>
+        <li><a href="https://mercedes-benz.com.kz/vans/">Көп орынды автокөліктер</a></li>
+        <li><a href="https://mercedes-benz.com.kz/trucks/">Жүк салғыш автокөліктер</a></li>
+        <li><a href="https://mercedes-benz.com.kz/bus/">Автобустар</a></li></ul></div>
+     
+        <script>
+           // Получаем элементы меню и содержимого страницы
+const menu = document.getElementById('menu');
+const content = document.querySelector('.content');
+
+// Функция для открытия меню
+function openMenu() {
+    menu.classList.add('open');
+}
+
+// Функция для закрытия меню
+function closeMenu() {
+    menu.classList.remove('open');
+}
+
+// Открытие меню при клике на определенную кнопку
+document.getElementById('openMenuButton').addEventListener('click', openMenu);
+
+// Закрытие меню, если клик был за пределами меню
+document.addEventListener('click', function(event) {
+    if (!menu.contains(event.target) && !event.target.matches('#openMenuButton')) {
+        closeMenu();
+    }
+});
+
+// Предотвращаем закрытие меню при клике внутри самого меню
+menu.addEventListener('click', function(event) {
+    event.stopPropagation();
+});
+
+
+        </script>
+</header>
+
+
+    <main>
+        <h1>Mercedes әлеміне қош келдіңіз!</h1>
+        <p>Mercedes - бұл тек әдемілік емес, ол эмоция.</p>
+    </main>
+
+   <main>
+        <h1>Біздің көліктер</h1>
+        <p>Mercedes - Сапа және сұлулық</p>
+    </main>
+   <div class="card-container">
+    <div class="card">
+    <div class="card-content">
+      <h3>Mercedes-AMG A 35</h3>
+      <p>39.982.250 ₸</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h3>CLE Coupe</h3>
+      <p>44.998.250 ₸</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h3>G-580</h3>
+      <p>92.818.000 ₸</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h3>Maybach S-class</h3>
+      <p>111.837.000 ₸</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h3>Mercedes-AMG GT C</h3>
+      <p>96.454.600 ₸</p>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-content">
+      <h3>Mercedes-AMG CLA</h3>
+      <p>43.462.650 ₸</p>
+    </div>
+    </div>
+</div>
+    </div>
+
+    <div class="progress-bar blue"></div>
+    <div class="progress-bar green"></div>
+    <div class="progress-bar cyan"></div>
+    <div class="progress-bar yellow"></div>
+    <div class="progress-bar red"></div>
+
+   <div class="share-container" >
+    <button class="share-button">🔗</button> 
+
+    <div class="share-menu" >
+        <a href="#" class="share-link"><img src="https://th.bing.com/th/id/R.a65246b65923d624f36ec1fd1c4adcb3?rik=umebRUwyQMnLnQ&pid=ImgRaw&r=0" alt="" width="50px"></a>
+        <a href="https://www.facebook.com/BlueStarofKazakhstan/?ref=ts" class="share-link"><img src="https://th.bing.com/th/id/R.70ecfdd862bdc3fdbf5715085812f49e?rik=fDJPk4oWTEisvw&pid=ImgRaw&r=0" alt="" width="50px"></a>
+        <a href="#" class="share-link"><img src="https://th.bing.com/th/id/OIP.tIbEqsqqBrd7Y_j5dWNRHwHaHa?rs=1&pid=ImgDetMain" alt="" width="50px"></a>
+        <a href="https://www.instagram.com/mercedesbenz.almaty/?ref=badge" class="share-link"><img src="https://th.bing.com/th/id/R.57e3e076a3eebb2b667d325b425e717a?rik=uHVdR7Kz%2bpTxVw&pid=ImgRaw&r=0" alt="" width="50px"></a>
+        <script type="text/javascript">document.querySelector(".share-button").addEventListener("click", function () {
+  const menu = document.querySelector(".share-menu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+});
+    </script>
+    </div>
+<br>
+
+</div>
+    <footer>
+        <p>&copy; 2024 Қазақстанның көгілдір жұлдызы — Mercedes-Benz ресми дилері</p>
+    </footer>
+</body>
+</html>
