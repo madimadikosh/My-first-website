@@ -33,39 +33,18 @@
         <li><a href="https://mercedes-benz.com.kz/vans/">Көп орынды автокөліктер</a></li>
         <li><a href="https://mercedes-benz.com.kz/trucks/">Жүк салғыш автокөліктер</a></li>
         <li><a href="https://mercedes-benz.com.kz/bus/">Автобустар</a></li></ul></div>
-     
-        <script>
-           // Получаем элементы меню и содержимого страницы
-const menu = document.getElementById('menu');
-const content = document.querySelector('.content');
+     <script>
+    document.addEventListener('click', function (event) {
+        const menuToggle = document.getElementById('menuToggle');
+        const sideMenu = document.querySelector('.side-menu');
 
-// Функция для открытия меню
-function openMenu() {
-    menu.classList.add('open');
-}
+        // Егер басқан жер бүйірлік менюдің ішкі бөлігі болмаса және меню ашық болса
+        if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target) && menuToggle.checked) {
+            menuToggle.checked = false; // Мәзірді жабу
+        }
+    });
+</script>
 
-// Функция для закрытия меню
-function closeMenu() {
-    menu.classList.remove('open');
-}
-
-// Открытие меню при клике на определенную кнопку
-document.getElementById('openMenuButton').addEventListener('click', openMenu);
-
-// Закрытие меню, если клик был за пределами меню
-document.addEventListener('click', function(event) {
-    if (!menu.contains(event.target) && !event.target.matches('#openMenuButton')) {
-        closeMenu();
-    }
-});
-
-// Предотвращаем закрытие меню при клике внутри самого меню
-menu.addEventListener('click', function(event) {
-    event.stopPropagation();
-});
-
-
-        </script>
 </header>
 
 
