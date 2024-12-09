@@ -406,11 +406,11 @@ header {
   animation: progress 2s linear infinite; /* Шексіз анимация */
 }
 
-.blue { background-color: blue; }
-.green { background-color: green; animation-delay: 0.4s; }
-.cyan { background-color: cyan; animation-delay: 0.8s; }
-.yellow { background-color: yellow; animation-delay: 1.2s; }
-.red { background-color: red; animation-delay: 1.6s; }
+.blue { background-color: aqua; }
+.green { background-color: lime; animation-delay: 0.4s; }
+.cyan { background-color: gold; animation-delay: 0.8s; }
+.yellow { background-color: red; animation-delay: 1.2s; }
+.red { background-color: purple; animation-delay: 1.6s; }
 
 @keyframes progress {
   0% {
