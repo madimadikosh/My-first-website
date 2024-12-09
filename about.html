@@ -34,6 +34,18 @@
       <li><a href="https://mercedes-benz.com.kz/bus/">Автобустар</a></li>
     </ul>
     </header>
+    <script>
+    document.addEventListener('click', function (event) {
+        const menuToggle = document.getElementById('menuToggle');
+        const sideMenu = document.querySelector('.side-menu');
+
+        // Егер басқан жер бүйірлік менюдің ішкі бөлігі болмаса және меню ашық болса
+        if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target) && menuToggle.checked) {
+            menuToggle.checked = false; // Мәзірді жабу
+        }
+    });
+</script>
+
     
 <section>
        <h2 style="text-align: center; margin: 20px 0;">Танымал модельдер</h2>
