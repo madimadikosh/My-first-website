@@ -454,3 +454,8 @@ header {
 .hidden-checkbox {
   visibility: hidden;
 }
+
+.progress-bar:hover {
+    animation-play-state: paused;
+}
+
